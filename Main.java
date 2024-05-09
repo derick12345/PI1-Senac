@@ -3,6 +3,8 @@
 import java.util.Scanner;
 
 public class Main {
+    private static final Scanner entrada = new Scanner(System.in);
+
     public static void main(String[] args) {
 
         System.out.println("====== MENU DE OPÇÕES ======");
@@ -16,46 +18,54 @@ public class Main {
         System.out.println("8 - Retirar veículo");
         System.out.println("0 - Sair");
 
-        Scanner entrada = new Scanner(System.in);
+       int opcaoMenu = entrada.nextInt();
 
-        int opcaoMenu = entrada.nextInt();
+       switch (opcaoMenu) {
+           case 1:
+               cadastrarVagas();
+               break;
+           case 2:
+               mostrarVagas();
+               break;
+          case 3:
+              cadastrarCondutor();
+              break;
+          default:
+              System.out.println("Opção inválida.");
+              break;
+        }
+    }
 
-        switch (opcaoMenu) {
-        case 1:
+    private static void cadastrarVagas() {
         System.out.println("Digite a CNH do condutor: ");
         int cnh = entrada.nextInt();
         System.out.println("Digite a placa do veículo: ");
         String placa = entrada.next();
-        break;
-       case 2:
+    }
+
+    private static void mostrarVagas() {
        System.out.println("Digite o piso desejado (terreo ou superior): ");
        String piso = entrada.next();
        switch (piso) {
-       case "terreo":
-       System.out.println("Total de vagas disponíveis no térreo: 250");
-       break;
-       case "superior":
-       System.out.println("Total de vagas disponíveis no superior: 155");
-       break;
-       default:
-       System.out.println("Piso não reconhecido.");
-                }
-      break;
-      case 3:
-     System.out.println("Digite o nome do condutor:");
-     String nomeCondutor = entrada.next();
-     System.out.println("Digite o cpf do condutor:");
-     String cpfCondutor = entrada.next();
-     System.out.println("Digite o cep e número do condutor:");
-     String cepNumero = entrada.next();
-          System.out.println("O veículo possui mais de um condutor? Se sim, digite o nome: ");
-        String nomeCondutor2 = entrada.next();
-       break;
-            default:
-                System.out.println("Opção inválida.");
-                break;
+           case "terreo":
+               System.out.println("Total de vagas disponíveis no térreo: 250");
+               break;
+           case "superior":
+               System.out.println("Total de vagas disponíveis no superior: 155");
+               break;
+           default:
+               System.out.println("Piso não reconhecido.");
         }
+    }
 
-        entrada.close();
+    private static void cadastrarCondutor() {
+        System.out.println("Digite o nome do condutor:");
+        String nomeCondutor = entrada.next();
+        System.out.println("Digite o cpf do condutor:");
+        String cpfCondutor = entrada.next();
+        System.out.println("Digite o cep e número do condutor:");
+        String cepNumero = entrada.next();
+        System.out.println("O veículo possui mais de um condutor? Se sim, digite o nome: ");
+        String nomeCondutor2 = entrada.next();
     }
 }
