@@ -30,7 +30,25 @@ public class Main {
           case 3:
               cadastrarCondutor();
               break;
-          default:
+           case 4:
+               cadastroDeVeiculos();
+               break;
+           case 5:
+               escalaDeHorarios();
+               break;
+           case 6:
+               listaNegraDeCondutores();
+               break;
+           case 7:
+               estacionarVeiuculo();
+               break;
+           case 8:
+               retirarVeiculo();
+               break;
+           case 9
+               sair();
+               break;
+                   default:
               System.out.println("Opção inválida.");
               break;
         }
@@ -67,5 +85,9 @@ public class Main {
         String cepNumero = entrada.next();
         System.out.println("O veículo possui mais de um condutor? Se sim, digite o nome: ");
         String nomeCondutor2 = entrada.next();
+
+        private static void cadastroDeVeiculos() {
+            System.out.println ("Digite o modelo do veículo:");
+            
     }
 }
