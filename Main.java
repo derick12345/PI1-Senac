@@ -6,51 +6,51 @@ public class Main {
     private static final Scanner entrada = new Scanner(System.in);
 
     public static void main(String[] args) {
+        while (true) {
+            System.out.println("====== MENU DE OPÇÕES ======");
+            System.out.println("1 - Cadastrar Vagas");
+            System.out.println("2 - Mostrar Vagas");
+            System.out.println("3 - Cadastro de Condutores");
+            System.out.println("4 - Cadastro de veículos");
+            System.out.println("5 - Escala de horários");
+            System.out.println("6 - Lista negra de condutores");
+            System.out.println("7 - Estacionar veículo");
+            System.out.println("8 - Retirar veículo");
+            System.out.println("0 - Sair");
 
-        System.out.println("====== MENU DE OPÇÕES ======");
-        System.out.println("1 - Cadastrar Vagas");
-        System.out.println("2 - Mostrar Vagas");
-        System.out.println("3 - Cadastro de Condutores");
-        System.out.println("4 - Cadastro de veículos");
-        System.out.println("5 - Escala de horários");
-        System.out.println("6 - Lista negra de condutores");
-        System.out.println("7 - Estacionar veículo");
-        System.out.println("8 - Retirar veículo");
-        System.out.println("0 - Sair");
-
-       int opcaoMenu = entrada.nextInt();
-
-       switch (opcaoMenu) {
-           case 1:
-               cadastrarVagas();
-               break;
-           case 2:
-               mostrarVagas();
-               break;
-          case 3:
-              cadastrarCondutor();
-              break;
-           case 4:
-               cadastroDeVeiculos();
-               break;
-           case 5:
-               escalaDeHorarios();
-               break;
-           case 6:
-               listaNegraDeCondutores();
-               break;
-           case 7:
-               estacionarVeiuculo();
-               break;
-           case 8:
-               retirarVeiculo();
-               break;
-           case 9
-               sair();
-               break;
-                   default:
-              System.out.println("Opção inválida.");
-              break;
+           int opcaoMenu = entrada.nextInt();
+    
+           switch (opcaoMenu) {
+               case 1:
+                   cadastrarVagas();
+                   break;
+               case 2:
+                   mostrarVagas();
+                   break;
+              case 3:
+                  cadastrarCondutor();
+                  break;
+               case 4:
+                   cadastroDeVeiculos();
+                   break;
+               case 5:
+                   escalaDeHorarios();
+                   break;
+               case 6:
+                   listaNegraDeCondutores();
+                   break;
+               case 7:
+                   estacionarVeiuculo();
+                   break;
+               case 8:
+                   retirarVeiculo();
+                   break;
+               case 0:
+                   return;
+               default:
+                  System.out.println("Opção inválida.");
+                  break;
+            }
         }
     }
 
